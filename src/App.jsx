@@ -38,7 +38,7 @@ function App() {
   }, []);
 
   const handleSearchChange = (searchTerm) => {
-    if (searchTerm === "") {
+    if (searchTerm.length < 3) {
       setFilteredPokemons([]);
     } else {
       const filteredPokemons = allPokemons.filter((pokemon) =>
